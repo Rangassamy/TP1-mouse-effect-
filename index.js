@@ -8,19 +8,24 @@
 
 //--------------------------------------------------------------------------
 
-const box1 = document.querySelector(".box1");
-const box2 = document.querySelector(".box2");
-const box3 = document.querySelector(".box3");
+const mouses = document.querySelectorAll(".mouse");
 
 window.addEventListener("mousemove", (e) => {
-  box1.style.left = e.pageX + "px";
-  box1.style.top = e.pageY + "px";
+  mouses.forEach((mouse) => {
+    mouse.style.top = e.y + "px";
+    mouse.style.left = e.x + "px";
+  });
 });
-window.addEventListener("mousemove", (e) => {
-  box2.style.left = e.pageX + "px";
-  box2.style.top = e.pageY + "px";
-});
-window.addEventListener("mousemove", (e) => {
-  box3.style.left = e.pageX + "px";
-  box3.style.top = e.pageY + "px";
-});
+
+// window.addEventListener("mousemove", (e) => {
+//   cursor.style.left = e.pageX + "px";
+//   cursor.style.top = e.pageY + "px";
+// });
+// window.addEventListener("mousemove", (e) => {
+//   mouse1.style.left = e.pageX + "px";
+//   mouse1.style.top = e.pageY + "px";
+// });
+// window.addEventListener("mousemove", (e) => {
+//   mouse2.style.left = e.pageX + "px";
+//   mouse2.style.top = e.pageY + "px";
+// });

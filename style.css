@@ -29,6 +29,32 @@ body {
   color: rgb(246, 246, 246);
   min-height: 100vh;
 }
+.mouse {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#cursor {
+  height: 5px;
+  width: 5px;
+  background: #2128bd;
+  border-radius: 150px;
+}
+#mouse1 {
+  height: 100px;
+  width: 100px;
+  border-radius: 150px;
+  background: white;
+  transition: 0.2s;
+}
+#mouse2 {
+  height: 200px;
+  width: 200px;
+  background: rgb(39, 38, 38);
+  border-radius: 150px;
+  transition: 0.3s;
+}
+
 nav {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -143,35 +169,4 @@ footer img {
   .footer-left ul {
     align-items: center;
   }
-}
-
-/* -----------------------Javascript------------------------- */
-
-.box1 {
-  height: 5px;
-  width: 5px;
-  background: green;
-  border-radius: 150px;
-  z-index: 2;
-}
-.box2 {
-  height: 90px;
-  width: 90px;
-  border-radius: 150px;
-  background: white;
-  z-index: 1;
-  mix-blend-mode: difference;
-  transition: 0.2s;
-}
-.box3 {
-  height: 240px;
-  width: 240px;
-  background: black;
-  border-radius: 150px;
-  mix-blend-mode: overlay;
-  transition: 0.3s;
-}
-.box {
-  position: absolute;
-  transform: translate(-50%, -50%);
 }
