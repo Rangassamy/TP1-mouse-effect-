@@ -7,9 +7,11 @@
   padding: 5px;
   font-family: "font-1", Arial;
   box-sizing: border-box;
+  cursor: none;
 }
 li {
   list-style: none;
+  z-index: 10;
 }
 a,
 a:visited {
@@ -20,6 +22,7 @@ a:visited {
 a:hover {
   font-size: 1.3rem;
   color: #2128bd;
+  cursor: pointer;
 }
 body {
   background: rgb(27, 27, 27);
@@ -143,3 +146,32 @@ footer img {
 }
 
 /* -----------------------Javascript------------------------- */
+
+.box1 {
+  height: 5px;
+  width: 5px;
+  background: green;
+  border-radius: 150px;
+  z-index: 2;
+}
+.box2 {
+  height: 90px;
+  width: 90px;
+  border-radius: 150px;
+  background: white;
+  z-index: 1;
+  mix-blend-mode: difference;
+  transition: 0.2s;
+}
+.box3 {
+  height: 240px;
+  width: 240px;
+  background: black;
+  border-radius: 150px;
+  mix-blend-mode: overlay;
+  transition: 0.3s;
+}
+.box {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
